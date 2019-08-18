@@ -1,0 +1,40 @@
+body{
+
+background-image: url("https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg");
+}
+
+.start{
+    color: yellow;
+    border:1px solid #000;
+    background-color:#000;
+}
+
+
+.main-header{
+    color:#eee;
+    text-align: center;
+    background-color:#000;
+}
+
+.time-rem{
+    color:#eee;
+    background-color:#000;
+    text-align:center;
+}
+
+.start{
+    text-align: center;
+}
+
+.questions{
+    background-color:#000;
+    color:#eee;
+    font-family:bold;
+}
+
+.stats{
+    background-color:#000;
+    color:#eee;
+    text-align:center;
+    font-weight:bold;
+}
