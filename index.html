@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel ="stylesheet" type="text/css" href="../TriviaGame/assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Totally Trivial Trivia</title>
 </head>
 <body>
@@ -17,42 +18,50 @@
     </div>
 
 <div class="time-rem">
-    <h1> Time Remaining</h1>
+    <h1></h1>
 </div>
+    <div class="questions">
     <div class="row">
             <P>1. How many licks does it take to get to the center of a lollipop?:<BR>
                 <div classcol-sm-12></div>
-                <input type="radio" name="1.How many licks does it take to get to the center of a lollipop?" value="364">364<BR>
-                <input type="radio" name="1.How many licks does it take to get to the center of a lollipop?" value="240">240<BR>
-                <input type="radio" name="1.How many licks does it take to get to the center of a lollipop?" value="256">256<BR>
-                <input type="radio" name="1.How many licks does it take to get to the center of a lollipop?" value="325">325<BR>
+                <input type="radio" name="How many licks does it take to get to the center of a lollipop?" value="364">364<BR>
+                <input type="radio" name="How many licks does it take to get to the center of a lollipop?" value="240">240<BR>
+                <input type="radio" name="How many licks does it take to get to the center of a lollipop?" value="256">256<BR>
+                <input type="radio" name="How many licks does it take to get to the center of a lollipop?" value="325">325<BR>
                 </p>
     
     </div>
     <div class ="row">
             <P>2. What is the capital of Texas?:<BR>
                 <div classcol-sm-12></div>
-                <input type="radio" name="2. What is the capital of Texas?" value="austin">Austin<BR>
-                <input type="radio" name="2. What is the capital of Texas?" value="dallas">Dallas<BR>
-                <input type="radio" name="2. What is the capital of Texas?" value="houston">Houston<BR>
-                <input type="radio" name="2. What is the capital of Texas?" value="san-antonio">San Antonio<BR>
+                <input type="radio" name="What is the capital of Texas?" value="austin">Austin<BR>
+                <input type="radio" name="What is the capital of Texas?" value="dallas">Dallas<BR>
+                <input type="radio" name="What is the capital of Texas?" value="houston">Houston<BR>
+                <input type="radio" name="What is the capital of Texas?" value="san-antonio">San Antonio<BR>
                 </p>
     </div>
 <!-- INPUT -->
     <div class ="row">
             <P>3. What is the tallest standing building on Earth?:<BR>
                 <div classcol-sm-12></div>
-                <input type="radio" name="3. What is the tallest building on Earth?:" value="one-world-trade-center">One World Trade Center<BR>
-                <input type="radio" name="3. What is the tallest building on Earth?:" value="shanghai-tower">Shanghai Tower<BR>
-                <input type="radio" name="3. What is the tallest building on Earth?:" value="burj khalifa">Burj Khalifa<BR>
-                <input type="radio" name="3. What is the tallest building on Earth?:" value="china-zun">China Zun <BR>
+                <input type="radio" name="What is the tallest building on Earth?:" value="one-world-trade-center">One World Trade Center<BR>
+                <input type="radio" name="What is the tallest building on Earth?:" value="shanghai-tower">Shanghai Tower<BR>
+                <input type="radio" name="What is the tallest building on Earth?:" value="burj khalifa">Burj Khalifa<BR>
+                <input type="radio" name="What is the tallest building on Earth?:" value="china-zun">China Zun <BR>
                 </p>
              </div>
+</div>
         
-             <button id="btn" type="submit" form="nameform" value="Submit">Done</button>
+        
+             <button id="done" type="submit" form="nameform" value="Submit">Done</button>
 <!-- INPUT -->
 
 <div class ="stats">
+    <p id="right"> Correctly Answered</p><br/>
+    <p id ="wrong"> Incorrectly Answered</p><br/>
+    <p id ="unanswered">Unanswered</p>
+    
+    <button id="restart" type="submit" form="nameform" value="submit">Restart</button>
     <!-- Right, Wrong, Unanswered -->
 </div>
 </div>
