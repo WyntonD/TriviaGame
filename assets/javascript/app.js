@@ -4,20 +4,21 @@ wrongAnswers = 0;
 unanswered = 0;
 
 var container = document.getElementById("#quizContainer");
-var questionEl =document.getElementById(".questions");
+var questionEl = document.getElementById(".options");
 var opt1 = document.getElementById("#opt1");
 var opt2 = document.getElementById("#opt2");
 var opt3 = document.getElementById("#opt3");
 var opt4 = document.getElementById("#opt4");
-
+var nextButton = document.getElementById("#nextButton");
+var resultCont = document.getElementById("#results");
 
 var questions = [{
-    "question": "How many licks does it take to get to the center of a lollipop?",
-    "option1": 364,
-    "option2": 240,
-    "option3": 256,
-    "option4": 325,
-    "answer": 364
+    "question": "What country is the Amazon Rainforest located in?",
+    "option1": "Chile",
+    "option2": "Paraguay",
+    "option3": "Brazil",
+    "option4": "Angola",
+    "answer": "Brazil"
 }, {
     "question": "What is the capital of Texas?",
     "option1": "Dallas",
@@ -31,20 +32,18 @@ var questions = [{
     "option2": "Shanghai Tower",
     "option3": "Burj Khalifa",
     "option4": "China Zun",
-    "answer": "Burj Khalifa"}];
+    "answer": "Burj Khalifa"
+}];
 
 var totalQuestions = questions.length;
-var nextButton = document.getElementById("#nextBtn")
-
-var results = document.getElementById("#stats");
 
 function loadQuestion(questionIndex) {
-    var q = questions[questionsIndex];
-    questionEl.textContent = (questionsIndex + 1) + ". " + q.questions;
-    opt1.textContent = q.option1;
-    opt2.textContent = q.option2;
-    opt3.textContent = q.option3;
-    opt4.textContent = q.option4;
+    var q = questions[questionIndex];
+    questionEl.textContent = (questionIndex + 1) + ". " + q.questions;
+    opt1.innerHTML = q.option1;
+    opt2.innerText = q.option2;
+    opt3.innerHTML = q.option3;
+    opt4.innerHTML = q.option4;
 }
 
 function loadNextQuestion() {
@@ -54,65 +53,62 @@ var selectedOption = document.querySelector("input[type=radio]:checked");
         return;
     }
 var answer = selectedOption.value;
-
-if(questions[currentQuestion].answer === answer) {
+    if(questions[currentQuestion].answer === answer) {
     rightAnswers++;
 }
 selectedOption.checked = false;
 currentQuestion++;
-
 if(currentQuestion == totalQuestions - 1){
-    nextButton.textContent = "Finish";
+    nextButton.innerHTML = "Finish";
 }
 
 if(currentQuestion == totalQuestions){
-    container.style.display ="none";
-    results.style.display =" ";
-    results.textContent ="Your Score" + score;
+    container.style.display = "none";
+    resultCont.style.display =" ";
+    resultCont.textContent ="Your Score" + score;
     return;
 }
 loadQuestion(currentQuestion);
 }
 
-
-loadQuestion(currentQuestion);
-
+loadNextQuestion();
 
 
 
-var isCorrect = false;
 
-answers = [364, "Austin", "Burj Khalifa"];
+// var isCorrect = false;
 
-var submitButton = document.getElementById("#done");
+// answers = [364, "Austin", "Burj Khalifa"];
 
-var correctAnswer = []; 
-var incorrectAnswer =[];
+// var submitButton = document.getElementById("#done");
 
-questions=[];
+// var correctAnswer = []; 
+// var incorrectAnswer =[];
 
-
-function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
-
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.textContent ="Time Left: " + minutes + ":" + seconds;
+// questions=[];
 
 
-        if (--timer === 0) {
-            clearInterval(timer);
-            console.log("Time's up");
-            $("#right").text("Correctly Answered: " + rightAnswers);
-            $("#wrong").text("Incorrectly Answered: " + wrongAnswers);
-            $("#unanswered").text("Unanswered: " + unanswered);
-        }
-    }, 1000);
-}
+// function startTimer(duration, display) {
+//     var timer = duration, minutes, seconds;
+//     setInterval(function () {
+//         minutes = parseInt(timer / 60, 10);
+//         seconds = parseInt(timer % 60, 10);
+
+//         minutes = minutes < 10 ? "0" + minutes : minutes;
+//         seconds = seconds < 10 ? "0" + seconds : seconds;
+
+//         display.textContent ="Time Left: " + minutes + ":" + seconds;
+
+
+//         if (--timer === 0) {
+//             clearInterval(timer);
+//             console.log("Time's up");
+//             $("#right").text("Correctly Answered: " + rightAnswers);
+//             $("#wrong").text("Incorrectly Answered: " + wrongAnswers);
+//             $("#unanswered").text("Unanswered: " + unanswered);
+//         }
+//     }, 1000);
+// }
 
 // $("#stats").attr("color", "red");
 // $("#stats").attr("color", "red");
