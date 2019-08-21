@@ -3,16 +3,29 @@ body{
 background-image: url("https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg");
 }
 
+.container{
+    margin-top:150px;
+}
+
+.title{
+    text-align:center;
+    color:white;
+    background-color:#000;
+
+}
+
+.questions {
+    height:50px;
+    text-align: center;
+}
+
+.option{
+    text-align:center;
+}
+
 .start{
     color: yellow;
     border:1px solid #000;
-    background-color:#000;
-}
-
-
-.main-header{
-    color:#eee;
-    text-align: center;
     background-color:#000;
 }
 
