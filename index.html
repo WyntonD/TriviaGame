@@ -9,62 +9,24 @@
     <title>Totally Trivial Trivia</title>
 </head>
 <body>
-    <div class= "container">
-    <!-- <div class ="main-header">
-        <h1>Totally Trivial Trivia</h1>
-    </div>
-    <div class="start">
-<button> Start</button>
-    </div>
-
-<div class="time-rem">
-    <h1></h1>
-</div> -->
-    <div class="container">
-    <div class="questions" id="quizContainer">
-                <div class="col-sm-12" id="questions"></div>
+    <div class="container" id="quizContainer">
+        <div class="title">
+            <h1>Totally Trivial Trivia!</h1>
+        </div>
+        <div id="time-rem">
+                <h3>Time Remaining :</h3>
+                <h3 id ="time"></h3>
+        </div>
+    <div class="questions" id="question"></div>
+                <div id="question" id="question"></div>
                 <label class="option"><input type="radio" name="option" value="1"/><span id ="opt1"></span></label>
-                <label class="option"><input type="radio" name="option" value="2"/><span id ="opt1"></span></label>
-                <label class="option"><input type="radio" name="option" value="3"/><span id ="opt1"></span></label>
-                <label class="option"><input type="radio" name="option" value="4"/><span id ="opt1"></span></label>
+                <label class="option"><input type="radio" name="option" value="2"/><span id ="opt2"></span></label>
+                <label class="option"><input type="radio" name="option" value="3"/><span id ="opt3"></span></label>
+                <label class="option"><input type="radio" name="option" value="4"/><span id ="opt4"></span></label>
                 <button id="nextButton" class="next" onclick="loadNextQuestion();">Next Question</button>
-            </div>
-                    <button id="result" class="container-result" style="display:none;">
-                    </div>
-    
     </div>
-    <!-- <div class ="row">
-            <P>2. What is the capital of Texas?:<BR>
-                <div class="col-sm-12"></div>
-                <input type="radio" name="What is the capital of Texas?" value="austin">Austin<span id="opt1"></span><BR>
-                <input type="radio" name="What is the capital of Texas?" value="dallas">Dallas<span id="opt2"></span><BR>
-                <input type="radio" name="What is the capital of Texas?" value="houston">Houston<span id="opt3"></span><BR>
-                <input type="radio" name="What is the capital of Texas?" value="san-antonio">San Antonio<span id="opt4"></span><BR>
-                </p>
-    </div>
-<!-- INPUT -->
-    <!-- <div class ="row">
-            <P>3. What is the tallest standing building on Earth?:<BR>
-                <div class="col-sm-12"></div>
-                <input type="radio" name="What is the tallest building on Earth?" value="one-world-trade-center">One World Trade Center<span id="opt1"></span><BR>
-                <input type="radio" name="What is the tallest building on Earth?" value="shanghai-tower">Shanghai Tower<span id="opt2"></span><BR>
-                <input type="radio" name="What is the tallest building on Earth?" value="burj khalifa">Burj Khalifa<span id="opt3"></span><BR>
-                <input type="radio" name="What is the tallest building on Earth?" value="china-zun">China Zun<span id="opt4"></span> <BR>
-                </p>
-             </div> --> -->
+<div id="resultCont" class="resultCont">
 </div>
-        
-        
-             <!-- <button id="done" type="submit" form="nameform" value="Submit">Done</button> -->
-<!-- INPUT -->
-
-<!-- <div class ="stats">
-    <p id="right"> Correctly Answered</p><br/>
-    <p id ="wrong"> Incorrectly Answered</p><br/>
-    <p id ="unanswered">Unanswered</p>
-    
-    <button id="restart" type="submit" form="nameform" value="submit">Restart</button> -->
-    <!-- Right, Wrong, Unanswered -->
 <script src="../TriviaGame/assets/javascript/app.js"></script>
 </body>
 </html>
