@@ -1,1 +1,2 @@
 # TriviaGame
+Trivia is a simple 3 question, timed quiz that keeps score if the user correctly answers each question. A big challenge with this project was solving how to determine if the user's choice was correctly guessed. This was solved through setting up a "right answer" array and creating a conditional around those answers.
